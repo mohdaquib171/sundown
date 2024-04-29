@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'NeueHaasDisplayMediu';
+    src: url('./assets/fonts/NeueHaasDisplay-Mediu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplayRoman';
+    src: url('./assets/fonts/NeueHaasDisplay-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* loader */
+
+#loader {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1 {
+    font-size: 4vw;
+    font-family: NeueHaasDisplayMediu;
+    color: transparent;
+    background: linear-gradient(to right, orange, orangered);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+
+#loader h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#loader h1:nth-child(3) {
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* page 1 */
+h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    color: white;
+    transition: all ease 0.4s;
+    color: white;
+}
+
+h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+
+/* page 2 */
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+
+
+/* page 3 */
+/* marquee animation */
+@keyframes move {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* blur circle animation */
+@keyframes anotherCircle {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+
+/* page 4 */
+.project-title {
+    font-size: 3vw;
+    font-family: NeueHaasDisplayMediu;
+    letter-spacing: -0.025em;
+}
+
+.project-info {
+    font-family: NeueHaasDisplayRoman;
+    color: #00000066;
+}
+
+.project-info span {
+    color: #000000e7;
+    font-size: 1vw;
+    letter-spacing: -0.025em;
+    word-spacing: .3em;
+}
+
+.project-item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background-color: #FF9831;
+    transition: all ease .4s;
+}
+
+.project-item:hover::before {
+    top: 0;
+}
+
+#view-all-projects::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: black;
+    top: 100%;
+    left: 0;
+    transition: all ease .4s;
+}
+
+#view-all-projects:hover::after {
+    top: 0;
+    border-radius: 0;
+}
+
+
+/* page 5 */
+.page5-container .page5left .page_5_left_menu::before {
+    height: 95%;
+    width: 3px;
+    position: absolute;
+    content: "";
+    left: -6%;
+    top: 5%;
+    border-radius: 20px;
+    background-color: #7a7979bf;
+}
+
+.page5-container .page5left .page_5_left_menu .active::after {
+    position: absolute;
+    content: "";
+    background-color: #FE330A;
+    width: 3px;
+    height: 100%;
+    top: 0%;
+    left: -6%;
+    border-radius: 30px;
+}
+
+.page_5_left_menu h2 {
+    color: #7a7979bf;
+}
+
+.page_5_left_menu h2.active {
+    color: #fff;
+}
+
+
+/* page 6 */
+
+body.show-custom-cursor .cursor {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* footer animation */
+
+@keyframes footerCircle4 {
+    from {
+        transform: translate(10%, 30%) skew(1);
+    }
+
+    to {
+        transform: translate(-5%, 15%) skew(0);
+    }
+}
+
+@keyframes footerCircle5 {
+    from {
+        transform: translate(10%, 30%) skew(1);
+    }
+
+    to {
+        transform: translate(-5%, 15%) skew(0);
+    }
+}
+
+@keyframes footerCircle6 {
+    from {
+        transform: translate(10%, 30%) skew(1);
+    }
+
+    to {
+        transform: translate(-5%, 15%) skew(0);
+    }
+}
